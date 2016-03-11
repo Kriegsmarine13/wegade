@@ -22,22 +22,22 @@ public class RTS_Camera_CS : MonoBehaviour {
         //cam mov by mPos
         if (mPosX < scrollArea)
         {
-            myTransform.Translate(Vector3.right * -scrollSpeed * Time.deltaTime);
+            myTransform.Translate(Vector3.right * -scrollSpeed * Time.deltaTime, Space.World);
         }
 
         if(mPosX >= Screen.width-scrollArea) 
         {
-            myTransform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
+            myTransform.Translate(Vector3.right * scrollSpeed * Time.deltaTime, Space.World);
         }
 
         if(mPosY < scrollArea)
         {
-            myTransform.Translate(Vector3.up * -scrollSpeed * Time.deltaTime);
+            myTransform.Translate(Vector3.forward * -scrollSpeed * Time.deltaTime, Space.World);
         }
 
         if(mPosY >= Screen.height-scrollArea)
         {
-            myTransform.Translate(Vector3.up * scrollSpeed * Time.deltaTime);
+            myTransform.Translate(Vector3.forward * scrollSpeed * Time.deltaTime, Space.World);
         }
 
         //cam mov by keyboard
