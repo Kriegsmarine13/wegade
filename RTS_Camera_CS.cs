@@ -47,8 +47,8 @@ public class RTS_Camera_CS : MonoBehaviour {
         //cam mov by holding down option or middle mouse and moving mouse
         if ((Input.GetKey("left alt") || Input.GetKey("right alt")) || Input.GetMouseButton(2))
         {
-            myTransform.Translate(new Vector3(Input.GetAxis("Mouse X") * dragSpeed * -1, Input.GetAxis("Mouse Y") * dragSpeed * -1,
-                0));
+            myTransform.Translate(new Vector3(Input.GetAxis("Mouse X") * dragSpeed * -1, 0,
+                Input.GetAxis("Mouse Y") * dragSpeed * -1), Space.World);
         }
 
 
