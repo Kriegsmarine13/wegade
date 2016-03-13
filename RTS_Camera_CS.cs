@@ -50,21 +50,19 @@ public class RTS_Camera_CS : MonoBehaviour {
             myTransform.Translate(new Vector3(Input.GetAxis("Mouse X") * dragSpeed * -1, 0,
                 Input.GetAxis("Mouse Y") * dragSpeed * -1), Space.World);
         }
-
-
-        //all this bullshit is for 90* x-rotated camera
-        /*
+        
+        
         //zooming in & out camera
         if(Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             //something like translating y-axis to +
-        myTransform.Translate(new Vector3(0,0,-1));
+        myTransform.Translate(Vector3.up * scrollSpeed);
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             //and here is translating y-axis to -
-        myTransform.Translate(new Vector3(0,0,1));
+        myTransform.Translate(Vector3.down * scrollSpeed);
         }
          //really no idea of what am I doing yet
          //but if it is proper, I'd fucking buy myself a drink
