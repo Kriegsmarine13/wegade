@@ -6,20 +6,26 @@ using System.Collections;
 public class CreateButtonOnClick : MonoBehaviour {
 
     GameObject button;
-    Text text;
     Button button1;
     Image image;
 
     public void CreateButtons(string ButtonName)
     {
-        button = new GameObject("Button");
+        button = new GameObject("NewButton");
         button1 = GetComponent<Button>();
         image = GetComponent<Image>();
-        button.AddComponent<Text>();
         button.AddComponent<Button>();
         button.AddComponent<Image>();
     }
+
+    //not working yet 
+    public void buttonParentTransform(Transform Canvas)
+    {
+        button.transform.SetParent(Canvas);
+    }
+
 }
+
 
 
 // so this stuff must create a button, when the MAIN button is clicked
