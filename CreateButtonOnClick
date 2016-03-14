@@ -1,0 +1,20 @@
+// not working yet
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class CreateButtonOnClick : MonoBehaviour {
+
+    GameObject button;
+    Text text;
+
+    text = GetComponent <Text> ();
+    public void CreateButtons(string ButtonName)
+    {
+        button = new GameObject("UI Button");
+        button.AddComponent<Text>("New Button");
+    }
+}
+
+// so this stuff must create a button, when the MAIN button is clicked
+//I dont think this is how menus are created but still this is the idea
