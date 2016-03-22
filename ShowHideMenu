@@ -17,12 +17,12 @@ public class ShowHideMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        MainButton.onClick.AddListener(this.rendCheck);
+        MainButton.onClick.AddListener(this.rendSwitch);
 	}
 
-    public void rendCheck()
+    public void rendSwitch()
     {
-        if (!rend.enabled) { rend.enabled = true; }
-        else { rend.enabled = false; }
+        if (!rend.enabled) { rend.enabled = false; }
+        else if (rend.enabled) { rend.enabled = true; };
     }
 }
